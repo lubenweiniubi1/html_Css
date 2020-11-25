@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本slideIn</title>
+    <style>
+      p {
+        animation-duration: 3s;
+        animation-name: slideIn;
+      }
+
+      @keyframes slideIn {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      h4{
+          position: fixed;
+          top:500px;
+          left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The Caterpillar and Alice looked at each other for some time in silence:
+      at last the Caterpillar took the hookah out of its mouth, and addressed
+      her in a languid, sleepy voice.
+    </p>
+    <h4>
+      animation-duration属性指定 \p 上的动画从开始到结束耗费3秒，@keyframes
+      指定使用名字为"slidein"的关键帧。
+      如果希望在不支持CSS动画的浏览器中使用自定义样式，应该将其写在这里;然而，在该例中，我们不需要除动画效果以外的任何自定义样式。
+      关键帧是用@keyframes定义的。该例中，我们只使用了两个关键帧。第一个出现在0%(此例中使用了别名from)处，此处元素的左边距为100%(即位于容器的右边界)，宽为300%(即容器宽度的3倍)，使得在动画的第一帧中标题位于浏览器窗口右边界之外。
+      第二帧出现在100%(此例中使用了别名to)。元素的左边距设为0%，宽设为100%，使得动画结束时元素与窗口左边界对齐。
+    </h4>
+  </body>
+</html>

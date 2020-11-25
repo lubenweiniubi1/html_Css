@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本slideIn</title>
+    <style>
+      p {
+        animation-duration: 3s;
+        animation-name: slideIn;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes slideIn {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        75% {
+          font-size: 300%;
+          margin-left: 25%;
+          width: 150%;
+        }
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      h4{
+          position: fixed;
+          top:500px;
+          left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The Caterpillar and Alice looked at each other for some time in silence:
+      at last the Caterpillar took the hookah out of its mouth, and addressed
+      her in a languid, sleepy voice.
+    </p>
+    <h4>
+        animation-iteration-count用以指定动画重复的次数，仅仅使用该属性就能使动画重复播放。在该例中，设该属性为infinite以使动画无限重复
+    </h4>
+  </body>
+</html>

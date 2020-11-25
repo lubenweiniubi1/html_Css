@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本slideIn</title>
+    <style>
+      p {
+        animation-duration: 3s;
+        animation-name: slideIn;
+      }
+
+      @keyframes slideIn {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        75% {
+          font-size: 300%;
+          margin-left: 25%;
+          width: 150%;
+        }
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      h4{
+          position: fixed;
+          top:500px;
+          left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The Caterpillar and Alice looked at each other for some time in silence:
+      at last the Caterpillar took the hookah out of its mouth, and addressed
+      her in a languid, sleepy voice.
+    </p>
+    <h4>
+      让我们给上面的示例中添加一个关键帧，比如标题的字号先变大然后恢复正常，添加这个关键帧十分简单：
+      在动画序列执行到75%的时候，标题元素的左边距为25%，宽度为150%。
+    </h4>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本slideIn</title>
+    <style>
+      p {
+        animation-duration: 3s;
+        animation-name: slideIn;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes slideIn {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        75% {
+          font-size: 300%;
+          margin-left: 25%;
+          width: 150%;
+        }
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      h4{
+          position: fixed;
+          top:500px;
+          left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The Caterpillar and Alice looked at each other for some time in silence:
+      at last the Caterpillar took the hookah out of its mouth, and addressed
+      her in a languid, sleepy voice.
+    </p>
+    <h4>
+        上面实现了动画的重复播放，但是每次动画开始时总跳回开始位置显得很怪异。我们真正想要的是标题来回滑动，这时只需要设置animation-direction属性为alternate。
+    </h4>
+  </body>
+</html>
