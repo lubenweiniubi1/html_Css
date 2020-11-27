@@ -363,3 +363,58 @@ Pink老师总结：
 ````
 
 通常一个dt 对应 多个dd
+
+### 8.表单
+
+在HTML中，一个完整的表单通常由表单域、表单控件（也称表单元素）和提示信息3格部分组成。
+
+#### 8.1 表单域
+
+表单域是一个包含表单元素的区域
+
+在HTML标签中，`<form>`标签用于定义表单域，以实现用户信息的收集和传递。
+
+`<form>`会把它范围内的表单元素信息提交给服务器
+
+````html
+<form action="url地址" method="提交方式" name=”表单域名称" >
+    各种表单控件
+</form>
+````
+
+#### 8.2 表单元素
+
+1. input输入表单元素
+
+````html
+<input type="各种类型"/>
+````
+
+自己去官方文档看https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input
+
+name和value是每个表单元素都有的属性值，主要给后台人员使用name表单元素的名字，要求表单按钮和复选框按钮要有相同name值
+
+2. select 下拉表单元素
+
+````html
+<select name="pets" id="pet-select">
+    <option value="">--Please choose an option--</option>
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+</select>
+
+````
+
+selected 选中状态
+
+3. textarea 文本域元素
+
+输入内容较多时使用 多行
+
+#### 8.3 label标签
+
+````html
+<label for="123">男</label>
+<input type="radio" id='123'>
+````
+
