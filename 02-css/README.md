@@ -73,3 +73,109 @@
 id选择器可以为标有特定id的HTML元素指定特定的样式。
 
 HTML 元素以 **id属性** 来设置id选择器 ，CSS中 id选择器以 ‘#’ 来定义
+
+
+
+### 2.6 通配符选择器
+
+在CSS中，通配符选择器使用"*" 定义，它表示选取页面中所有元素（标签）
+
+```css
+* {
+    属性1: 属性值1;
+}
+```
+
++ 通配符选择器不需要调用，自动就给所有元素使用样式
+
++ 特殊情况下使用，后面讲解使用场景（以下是清楚所有元素标签的内外边距，后期讲）
+
+````css
+* {
+    margin:0;
+    padding:0;
+}
+````
+
+
+
+## 3. CSS字体属性
+
+### 3.1 字体系列
+
+使用`font-family`属性定义文本的字体系列。
+
+### 3.2 font-weight
+
+100 - 900 九个挡位
+
+### 3.3 font-style
+
+normal ,italic 倾斜的
+
+### 3.5 字体复合属性
+
+````css
+font: font-style font-weight font-size/line-height font-family
+````
+
++ 使用font时，要按照上面顺序
++ 不需要设置的属性可以省略（取默认值），但必须保留font size 和font family，**不然不会生效**
+
+### 4.CSS 文本属性
+
+### 4.1 color
+
+color属性用于定义文本颜色。
+
+| 颜色表示     | 属性值           |
+| ------------ | ---------------- |
+| 预定义颜色值 | red，green，pink |
+| 十六进制     | #FF0000 ,#FF6600 |
+| RGB代码      | rgb（225，00）   |
+
+### 4.2 对齐文本
+
+text-align 属性用于设置元素内文本内容水平对齐方式
+
+````css
+div {
+    text-align: center;
+}
+````
+
+属性值：
+
+| 属性值 | 解释           |
+| ------ | -------------- |
+| left   | 左对齐（默认） |
+| right  | 右对齐         |
+| center | 居中对齐       |
+
+### 4.3 装饰文本
+
+text-decoration 属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线。 
+
+````css
+text-decoration-line: none;
+text-decoration-line: underline;
+text-decoration-line: overline;
+text-decoration-line: line-through;
+text-decoration-line: blink;
+````
+
+### 4.4 文本缩进
+
+text-indent属性用来指定文本的第一行缩进，通常是将段落**首行**进行缩进。
+
+````css
+div {
+    text-indent : 10px;
+}
+````
+
+可以时负值，如果想缩进刚好两个字的长度：
+
+`em`是一个相对单位，就是当前元素（font-size)1个文字的大小，如果当前元素没有设置大小，则会按照父元素的一个文字大小。
+
+ 
