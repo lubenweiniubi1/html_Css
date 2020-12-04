@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高的继承</title>
+    <style>
+        body {
+            color: pink;
+            font: 12px / 1.5 "Microsoft YaHei";
+        }
+
+        div {
+            /* 子元素继承父元素body的行高的1.5倍 */
+            /* 这个1.5就是当前元素文字大小 font-size的一点五倍 */
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>粉色回一</div>
+    <p>粉色回一</p>
+</body>
+
+</html>
