@@ -248,7 +248,7 @@ CSS基本采取简写形式即可
 1. 比如w200 按tab就可以生成width: 200px
 2. 比如 lh26
 
-## 7 复合选择器
+## 7 CSS 复合选择器
 
 ### 7.1 什么是复合选择器
 
@@ -404,7 +404,7 @@ CSS没有给我们提供文字垂直居中的代码，我们可以使用小技�
 
 解决方案：让文字的行高等于盒子的高度，这样可以让文字在当前盒子垂直居中了
 
-## 9. 背景
+## 9. CSS 背景
 
 ### 9.1 background-color
 
@@ -464,3 +464,43 @@ background-position: x y;
 
 
 ### 9.5 背景图像图定（背景附着）
+
+background-attachment 属性设置背景图像是否固定或者随着页面其余部分滚动
+
+````css
+background-attachment: scroll | fixed
+````
+
+
+
+### 9.6 背景复合写法
+
+此属性是一个 [简写属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Shorthand_properties)，可以在一次声明中定义一个或多个属性：[`background-clip`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip)、[`background-color`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-color)、[`background-image`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image)、[`background-origin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-origin)、[`background-position`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position)、[`background-repeat`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-repeat)、[`background-size`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size)，和 [`background-attachment`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-attachment)。节约代码量。
+
+- `<bg-size>` 只能紧接着 `<position>` 出现，以"/"分割，如： "`center/80%`".
+- `<box>` 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 [`background-origin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-origin) 和 [`background-clip`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip)。如果出现 2 次，第一次的出现设置 [`background-origin`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-origin)，第二次的出现设置 [`background-clip`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip)。
+- `<background-color>` 只能被包含在最后一层。
+
+- **注意:** [`background-color`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-color) 只能在background的最后一个属性上定义，因为整个元素只有一种背景颜色。
+
+
+
+### 9.7 背景色半透明
+
+CSS3 为我们提供了背景色半透明效果
+
+````css
+background: rgba(0,0,0,0.3);
+````
+
++ 最后一个参数是alpha透明度，取值范围0~1
++ 背景色半透明不会对盒子里的内容产生影响
++ CSS3新增特性，是IE9+版本才支持
+
+
+
+## 10.CSS 三大特性
+
+CSS 有三个非常重要的特性：层叠性、继承性、优先级。
+
+### 1.1 层叠性
