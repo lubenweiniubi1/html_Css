@@ -603,7 +603,23 @@ CSS盒子模型本质上是一个盒子，封装周围的HTML元素，包括：�
 
 ### 11.2 边框
 
-
+border-width ,border-style,border-color
 
 ### 11.3 表格的细线边框
 
+border-collapse属性控制浏览器绘制表格边框的方式，他控制相邻单元格的边框
+
++ collapse 单词是合并的意思
++ border-collapse：collapse 的意思是相邻边框合并在一起
+
+
+
+### 11.5 边框会影响盒子的实际大小
+
+
+
+### 11.6 内边距 padding影响了盒子实际大小
+
+padding内边距可以撑开盒子，我们可以做巧妙的运用
+
+因为每个导航栏里面的数字不一样多，我们可以不用给盒子宽度了，直接给padding最合适
