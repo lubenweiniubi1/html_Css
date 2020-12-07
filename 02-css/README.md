@@ -623,3 +623,28 @@ border-collapse属性控制浏览器绘制表格边框的方式，他控制相�
 padding内边距可以撑开盒子，我们可以做巧妙的运用
 
 因为每个导航栏里面的数字不一样多，我们可以不用给盒子宽度了，直接给padding最合适
+
+
+## 其他
+
+### px、em、rem、%、vw、vh、vm这些单位的区别？
+
+| 单位 | 说明                                                         | 优缺点                                                       |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| px   | px就是pixel的缩写，意为像素。px就是设备或者图片最小的一个点，比如常常听到的电脑像素是1024x768的，表示的是水平方向是1024个像素点，垂直方向是768个像素点。 | 是我们网页设计常用的单位，也是基本单位。通过px可以设置固定的布局或者元素大小，缺点是没有弹性 |
+| em   | 参考物是父元素的font-size，具有继承的特点。如果自身定义了font-size，则按自身来计算（浏览器默认字体是16px），整个页面内1em不是一个固定的值。 | 1. em的值并不是固定的； 2. em会继承父级元素的字体大小。      |
+| rem  | 是相对于根元素html，这样就意味着，我们只需要在根元素确定一个参考值，可以设计HTML为大小为10px，到时设置1.2rem就是12px.以此类推。 | 优点是，只需要设置根目录的大小就可以把整个页面的成比例的调好。 |
+| %    | 一般来说就是相对于父元素的，                                 | 1、对于普通定位元素就是我们理解的父元素 2、对于position: absolute;的元素是相对于已定位的父元素 3、对于position: fixed;的元素是相对于ViewPort（可视窗口）， |
+| vw   | css3新单位，view width的简写，是指可视窗口的宽度。假如宽度是1200px的话。那10vw就是120px。 | 举个例子：浏览器宽度1200px, 1 vw = 1200px/100 = 12 px。      |
+| vh   | css3新单位，view height的简写，是指可视窗口的高度。假如高度是1200px的话。那10vh就是120px | 举个例子：浏览器高度900px, 1 vh = 900px/100 = 9 px。         |
+| vm   | css3新单位，相对于视口的宽度或高度中较小的那个。其中最小的那个被均分为100单位的vm 举个例子：浏览器高度900px，宽度1200px，取最小的浏览器高度，1 vm = 900px/100 = 9 px。 | 兼容性太差 ，现在基本上没人用，我试了一下Chrome就用不了。    |
+
+
+
+### -webkit-box-reflect
+
+> This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.
+>
+> 该特性是非标准的，也不在标准轨道上.不要在面向Web的生产网站上使用它:它不会对每个用户都有效。实现之间也可能存在较大的不兼容性，而且将来行为可能会改变。
+
+shit
