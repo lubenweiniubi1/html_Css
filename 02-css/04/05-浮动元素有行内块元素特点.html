@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内块元素特点浮动</title>
+    <style>
+        span,
+        div {
+            float: left;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* 如果行内元素有了浮动，则不需要转换成块级/行内块就可以直接给高度和宽度 */
+        
+        p {
+            height: 200px;
+            background-color: purple;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <span>1</span>
+    <span>2</span>
+    <div>3</div>
+    <p>p</p>
+</body>
+
+</html>
