@@ -791,7 +791,102 @@ float属性用于创建浮动框，将其移到以便，直到左边缘或右边
 
 ### 1.8 浮动清除
 
+理想状态中，让子盒子撑开父亲，不设置父盒子高度。不给父元素高度也不合适，因为浮动元素不占用位置的
 
+由于父盒子很多情况下不方便给高度，但是子盒子浮动又不占有位置，最后父级盒子高度为0时，就会影响下面的标准流盒子。
+
++ 由于浮动元素不再占有原文档流的位置，所以它会对后面的元素排版产生影响。
+
+
+
+### 1.9 清除浮动的本质
+
++ 清除浮动的本质就是清除浮动元素造成的影响
++ 如果父盒子本身有高度，则不需要清除浮动
++ 清除浮动之后，父级就会根据浮动的子盒子自动检测高度。父级有了高度，就不会影响下面的标准流了
+
+语法：
+
+````css
+clear: 属性值;
+````
+
+清除浮动的策略时：闭合浮动
+
+
+
+### 1.10 清除浮动方法
+
+1. 额外标签发也称为隔墙法，时W3C推荐的做法。
+
+会在浮动末尾添加一个空的标签，例如 `<div style="clear: both"></div>`，或者其他标签比如`<br>`等。
+
++ 很方便，但是会添加很多无意义的标签，结构化差
+
+注意： 这个新的比空标签必须是块级元素
+
+2. 父级添加overflow属性
+
+给父级添加这个属性
+
++ 缺点 ：无法显示溢出部分
+
+3. 父级添加：after为元素
+
+```css
+.clear：after {
+    content:'';
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+```
+
++ 有点：没有增加标签，结构简单
++ 缺点：照顾低版本浏览器
+
+4. 父级添加双伪元素
+
+````css
+.clearfix:before,.clearfix:after {
+    content:'';
+    display: table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom: 1;
+}
+````
+
++ 优点 代码更简洁
+
++ 缺点 照顾低版本
+
+  
+
+##  CSS书写顺序
+
+建议遵循以下顺序：
+
+1. 布局定位属性： display/position/float/clear/visibility/overflow(建议display第一个写，毕竟关系到模式)
+2. 自身属性： width/height/margin/padding/border/background
+3. 文本属性： color/font/text-decoration/text-align/white-space/break-word
+4. 其他css属性（css3）：content/cursor/border-radius/box-shadow/background:linear-gradient....
+
+
+
+## 页面布局整体思路
+
+为了提高网页制作效率，布局时通常有以下整体思路：
+
+1. 必须确定页面的版心（可视区），我们测量可知
+2. 分析页面中的行模块，以及每个行模块中的列模块，**其实就是页面布局第一准则**
+3. 一行中的列模块经常浮动布局，先确定每列大小，之后确定位置。**其实就是页面布局第2准则**
+4. 制作HTML结构。我们还是遵循，先有结构，后有样式的原则。结构永远最重要。
+5. 所以，先理清楚布局结构，在写代码尤为重要。
 
 ## 其他
 
@@ -824,4 +919,12 @@ list-style:  none;
 ````
 
 
+
+# [行内块之间存在间隙](https://www.cnblogs.com/yanggeya/p/10553721.html)
+
+现代浏览器中 inline 和 block 元素 display:inline-block 后均会产生水平空隙。 inline 元素默认就有空隙存在！它们是谁？是空白符（white space）
+
+1.写在一行
+2.在父元素div上加上 font-size:0
+3.使用浮动，input标签的display:block
 
