@@ -3,6 +3,21 @@
     margin: 0;
 }
 
+
+/* 添加底色 */
+
+body {
+    background-color: #f3f5f7;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .w {
     /* 版心 */
     width: 1200px;
@@ -11,7 +26,102 @@
 
 .header {
     height: 42px;
-    background-color: pink;
+    /* background-color: pink; */
     /* 注意 此地方会层叠w的margin */
     margin: 30px auto;
+}
+
+.logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    /* background-color: purple; */
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+
+/* 让导航栏一行显示 */
+
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+
+
+/* 搜索框 */
+
+.search {
+    float: left;
+    width: 411px;
+    height: 42px;
+    /* background-color: skyblue; */
+    margin-left: 70px;
+}
+
+.search input {
+    float: left;
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: 0;
+    padding-left: 15px;
+    color: #bfbfbf;
+    font-size: 14px;
+}
+
+
+/* 轮廓 有意思 */
+
+.search input:focus {
+    outline: 1px solid #00a4ff;
+}
+
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    background-color: blue;
+    /* 按钮默认边框 手动去掉 */
+    border: 0;
+    background: url('../../static/学成在线2.png') center / contain;
+}
+
+.search button:focus {
+    outline: 0;
+}
+
+.user {
+    float: right;
+    margin-right: 30px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+}
+
+.user img {
+    width: 30px;
+    height: 30px;
 }
