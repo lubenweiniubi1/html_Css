@@ -856,6 +856,7 @@ clear: 属性值;
 .clearfix:after {
     clear:both;
 }
+/*这是针对于IE6/7的，因为IE6/7不支持:after伪类，这个神奇的zoom:1让IE6/7的元素可以清除浮动来包裹内部元素。具体意思的话，不用深究，听说微软的工程师自己都无法解释清楚。height:1%效果也是一样*/
 .clearfix {
     *zoom: 1;
 }
