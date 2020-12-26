@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+body {
+  background-color: #ccc;
+}
+
+.slide {
+  position: relative;
+  /* overflow  将多余的two three 给藏起来*/
+  overflow: hidden;
+  width: 800px;
+  height: 500px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.slide ul {
+  margin: 10px 0;
+  width: calc(800px * 3);
+  height: 500px;
+  transition: all 0.5s;
+}
+.slide ul li {
+  float: left;
+  width: 800px;
+  height: 500px;
+  line-height: 500px;
+  font-size: 50px;
+}
+
+.slide li:nth-child(1) {
+  background-color: #9fa8ef;
+}
+.slide li:nth-child(2) {
+  background-color: #ef9fb1;
+}
+.slide li:nth-child(3) {
+  background-color: #9fefc3;
+}
+
+/* 设置按钮样式 */
+.slide input[name='button'] {
+  display: none;
+}
+
+/* 设置label位置 */
+.slide label[for^='button'] {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  bottom: 30px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 20px;
+  transition: 0.3s;
+}
+
+/* 分别设置三个按钮的位置，不然都在同一个位置 只显示一个 */
+.slide label[for='button1'] {
+  left: 40%;
+}
+.slide label[for='button2'] {
+  left: 45%;
+}
+.slide label[for='button3'] {
+  left: 50%;
+}
+
+/* 当按钮1被选中的时候  ul 不动 */
+#button1:checked ~ ul {
+  margin-left: 0;
+}
+/* 当按钮2被选中的时候  ul 往左移动800px */
+#button2:checked ~ ul {
+  margin-left: -800px;
+}
+/* 当按钮3被选中的时候  ul 往左移动800px * 2 */
+#button3:checked ~ ul {
+  margin-left: -1600px;
+}
+
+/* 设置label */
+#button1:checked ~ label[for='button1'] {
+  background-color: rgb(255, 80, 0);
+}
+
+#button2:checked ~ label[for='button2'] {
+  background-color: rgb(255, 80, 0);
+}
+
+#button3:checked ~ label[for='button3'] {
+  background-color: rgb(255, 80, 0);
+}
